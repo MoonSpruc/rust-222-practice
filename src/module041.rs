@@ -104,9 +104,40 @@ fn test8() {
 // ---------------------------------------------
 
 // Десяте завдання
-// fn test10() {}
+// #[test]
+use std::ops::{Range, RangeInclusive};
+
+fn test10() {
+    assert_eq!((1..5), Range { start: 1, end: 5 });
+    assert_eq!((1..=5), RangeInclusive::new(1, 5));
+
+    println!("Success!");
+}
 
 // ---------------------------------------------
 
 // Одинадцяте завдання
-// fn test11() {}
+#[test]
+fn test11() {
+    // Integer addition
+    assert!(1u32 + 2 == 3); // 1 + 2 = 3
+
+    // Integer subtraction
+    assert!(1i32 - 2 == -1); // 1 - 2 = -1
+    assert!(1u8 - 2 == 255); // 1u8 - 2 переповнює й стає 255 (0xFF)
+
+    assert!(3 * 50 == 150); // 3 * 50 = 150
+    assert!(9.6 / 3.2 == 3.0); // 9.6 / 3.2 = 3.0
+
+    assert!(24 % 5 == 4); // 24 % 5 = 4
+
+    assert!(true && false == false); // true AND false = false
+    assert!(true || false == true);   // true OR false = true
+    assert!(!true == false);           // NOT true = false
+
+    println!("0011 AND 0101 is {:04b}", 0b0011u32 & 0b0101); // 0011 AND 0101 = 0001
+    println!("0011 OR 0101 is {:04b}", 0b0011u32 | 0b0101);  // 0011 OR 0101 = 0111
+    println!("0011 XOR 0101 is {:04b}", 0b0011u32 ^ 0b0101); // 0011 XOR 0101 = 0110
+    println!("1 << 5 is {}", 1u32 << 5);                      // 1 << 5 = 32
+    println!("0x80 >> 2 is 0x{:x}", 0x80u32 >> 2);           // 0x80 >> 2 = 0x20
+}
