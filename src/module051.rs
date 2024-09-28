@@ -66,7 +66,13 @@ fn test5() {
 // Шосте завдання
 #[test]
 fn test6() {
+    let s = String::from("Hello ");
 
+    let mut s1 = s;
+
+    s1.push_str("World!");
+
+    println!("Success! 6");
 }
 
 // ---------------------------------------------
@@ -74,7 +80,15 @@ fn test6() {
 // Сьоме завдання
 #[test]
 fn test7() {
+    let mut x = Box::new(5);
 
+    let y = &mut *x;
+
+    *y = 4;
+
+    assert_eq!(*x, 4);
+
+    println!("Success! 7");
 }
 
 // ---------------------------------------------
@@ -82,7 +96,11 @@ fn test7() {
 // Восьме завдання
 #[test]
 fn test8() {
+    let t = (String::from("hello"), String::from("world"));
 
+    let _s = &t.0;
+
+    println!("{:?}, {:?}", _s, &t.1);
 }
 
 // ---------------------------------------------
@@ -90,5 +108,9 @@ fn test8() {
 // Дев'яте завдання
 #[test]
 fn test9() {
+    let t = (String::from("hello"), String::from("world"));
 
+    let (ref s1, ref s2) = t;
+
+    println!("{:?}, {:?}, {:?}", s1, s2, t); // -> "hello", "world", ("hello", "world")
 }

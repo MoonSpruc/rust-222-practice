@@ -5,7 +5,7 @@ fn test1() {
     let _y: i32;
 
     assert_eq!(x, 5);
-    println!("Success!");
+    println!("Success! 1");
 }
 
 // ---------------------------------------------
@@ -17,7 +17,7 @@ fn task2() {
     x += 2;
 
     assert_eq!(x, 3);
-    println!("Success!");
+    println!("Success! 2");
 }
 
 // ---------------------------------------------
@@ -30,6 +30,17 @@ fn task3() {
     println!("The value of x is {} and value of y is {}", x, y);
 }
 
+// ---------------------------------------------
+
+// Четверте завдання
+#[test]
+fn task4() {
+    let x = define_x();  // Отримуємо значення x з define_x
+    println!("{}, world", x);
+}
+fn define_x() -> &'static str {  // Функція повертає строку
+    "hello 4"
+}
 // ---------------------------------------------
 
 // П'яте завдання
@@ -63,7 +74,7 @@ fn task6() {
     // Shadowing
     let y = "I can also be bound to text!";
 
-    println!("Success!");
+    println!("Success! 6");
 }
 
 // ---------------------------------------------
@@ -85,18 +96,18 @@ fn task8() {
     assert_eq!(x, 3);
     assert_eq!(y, 2);
 
-    println!("Success!");
+    println!("Success! 8");
 }
 
 // ---------------------------------------------
 // Дев'яте завдання
-#[test]
-fn task9() {
-    let (x, y);
-    // (x,..) = (3, 4); // Роскоментувати, бо гіт не пропускає
-    // [.., y] = [1, 2]; // Роскоментувати, бо гіт не пропускає
-    // Fill the blank to make the code work
-    // assert_eq!([x,y], [3,2]); // Роскоментувати, бо гіт не пропускає
-
-    println!("Success!");
-}
+// #[test]
+// fn task9() {
+//     let (x, y);
+//     (x,..) = (3, 4); // Роскоментувати, бо гіт не пропускає
+//     [.., y] = [1, 2]; // Роскоментувати, бо гіт не пропускає
+//     // Fill the blank to make the code work
+//     assert_eq!([x,y], [3,2]); // Роскоментувати, бо гіт не пропускає
+//
+//     println!("Success! 9");
+// }

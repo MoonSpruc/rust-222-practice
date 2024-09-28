@@ -15,7 +15,15 @@ fn test1() {
 // Друге завдання
 #[test]
 fn test2() {
-
+    let c1 = "中"; // строка, содержащая иероглиф
+    if let Some(first_char) = c1.chars().next() { // достаємо першийс символ
+        print_char(first_char);
+    } else {
+        println!("Строка порожня");
+    }
+}
+fn print_char(c : char) {
+    println!("{}", c);
 }
 
 // ---------------------------------------------
