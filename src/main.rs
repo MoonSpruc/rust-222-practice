@@ -10,7 +10,9 @@
 // mod module063;
 // mod module064;
 // mod module065;
-mod module066;
+// mod module066;
+
+mod tasks_on_practice_online;
 
 fn main() {
     // chapter03::test();
