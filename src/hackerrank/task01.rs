@@ -1,3 +1,5 @@
+// https://www.hackerrank.com/challenges/solve-me-first/problem?isFullScreen=true
+
 use std::io;
 
 #[test]
