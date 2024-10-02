@@ -38,29 +38,29 @@ fn print_array<T: std::fmt::Debug>(arr: &[T]) {
 }
 
 // ---------------------------------------------
-#![allow(incomplete_features)] // Помилка
-#![feature(generic_const_exprs)] // Помилка
-
-pub enum Assert<const CHECK: bool> {}
-
-pub trait IsTrue {}
-
-impl IsTrue for Assert<true> {}
-
-fn check_size<T>(val: T)
-where
-    Assert<{ core::mem::size_of::<T>() < 768 }>: IsTrue,
-{
-    //...
-}
-
-#[test]
-fn test3() {
-    check_size([0u8; 767]); // Масив із 767 елементів типу u8
-    check_size([0i32; 191]); // Масив із 191 елемента типу i32
-    check_size(["hello你好"; 5]); // Розмір &str - 5 рядків
-    check_size([(); 5].map(|_| "hello你好".to_string())); // Розмір String - 5 рядків
-    check_size(['中'; 4]); // Розмір char - 4 символи
-
-    println!("Success! 3");
-}
+// #![allow(incomplete_features)] // Помилка
+// #![feature(generic_const_exprs)] // Помилка
+//
+// pub enum Assert<const CHECK: bool> {}
+//
+// pub trait IsTrue {}
+//
+// impl IsTrue for Assert<true> {}
+//
+// fn check_size<T>(val: T)
+// where
+//     Assert<{ core::mem::size_of::<T>() < 768 }>: IsTrue,
+// {
+//     //...
+// }
+//
+// #[test]
+// fn test3() {
+//     check_size([0u8; 767]); // Масив із 767 елементів типу u8
+//     check_size([0i32; 191]); // Масив із 191 елемента типу i32
+//     check_size(["hello你好"; 5]); // Розмір &str - 5 рядків
+//     check_size([(); 5].map(|_| "hello你好".to_string())); // Розмір String - 5 рядків
+//     check_size(['中'; 4]); // Розмір char - 4 символи
+//
+//     println!("Success! 3");
+// }
