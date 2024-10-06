@@ -1,4 +1,9 @@
 // https://www.hackerrank.com/challenges/a-very-big-sum/problem?isFullScreen=true
+/*
+Умова:
+1. Обчислити і вивести суму елементів масиву з огляду на те,
+що деякі з цих цілих чисел можуть бути досить великими.
+*/
 
 use std::env;
 use std::fs::File;

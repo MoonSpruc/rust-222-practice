@@ -1,4 +1,9 @@
 // https://www.hackerrank.com/challenges/solve-me-first/problem?isFullScreen=true
+/*
+Умова:
+1. Зчитування двох чисел із стандартного потоку введення та виведення їх суми (A+B)
+у стандартний потік виведення.
+*/
 
 use std::io;
 

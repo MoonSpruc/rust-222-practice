@@ -1,4 +1,8 @@
 // https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true
+/*
+Умова:
+1.Знайти їх точки порівняння, порівнюючи a[0] з b[0], a[1] з b[1] і a[2] з b[2].
+*/
 
 use std::env;
 use std::fs::File;

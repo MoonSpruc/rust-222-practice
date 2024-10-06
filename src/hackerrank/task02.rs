@@ -1,4 +1,8 @@
 // https://www.hackerrank.com/challenges/simple-array-sum/problem?isFullScreen=true
+/*
+Умова:
+1. Дано масив цілих чисел. Знайдіть суму його елементів.
+*/
 
 use std::env;
 use std::fs::File;
