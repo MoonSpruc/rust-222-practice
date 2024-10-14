@@ -12,12 +12,10 @@ fn main() {
     let max_width = 2 * triangles - 1;
 
     for i in 0..triangles {
-        let height = i + 1;
-        let spaces = (max_width - (2 * height - 1)) / 2;
-
-        for j in 0..height {
+        for j in 0..=i {
             let stars = 2 * j + 1;
-            println!("{}{}", " ".repeat(spaces + (height - j - 1)), "*".repeat(stars));
+            let spaces = (max_width - stars) / 2;
+            println!("{}{}", " ".repeat(spaces), "*".repeat(stars));
         }
     }
 

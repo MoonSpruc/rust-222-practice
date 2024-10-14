@@ -6,12 +6,9 @@
 
 fn invert_the_case(s: String) -> String {
     s.chars()
-        .map(|c| {
-            if c.is_uppercase() {
-                c.to_lowercase().next().unwrap()
-            } else {
-                c.to_uppercase().next().unwrap()
-            }
+        .map(|c| match c {
+            _ if c.is_uppercase() => c.to_lowercase().next().unwrap(),
+            _ => c.to_uppercase().next().unwrap(),
         })
         .collect()
 }
