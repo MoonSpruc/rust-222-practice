@@ -1,2 +1,9 @@
-// mod convert;
+mod convert;
 mod rombik;
+mod gcd;
+mod tree;
+mod registr;
+mod simple_number;
+mod string_rotate;
+mod palindrom;
+mod min_adjacent_sum;

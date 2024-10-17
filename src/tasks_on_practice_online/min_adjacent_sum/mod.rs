@@ -1,0 +1,1 @@
+mod min_adjacent_sum;
