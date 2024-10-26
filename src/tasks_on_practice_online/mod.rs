@@ -7,3 +7,7 @@ mod simple_number;
 mod string_rotate;
 mod palindrom;
 mod min_adjacent_sum;
+mod shipments;
+mod muxa_slon;
+mod rectangles;
+mod gray_code;
